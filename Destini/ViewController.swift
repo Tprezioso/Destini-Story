@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var restartButton: UIButton!
     
     var storyIndex : Int = 1
-    let storyLineDB = StoryLineBD.init()
+    let storyLine = StoryLineBD()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,32 +30,32 @@ class ViewController: UIViewController {
     @IBAction func buttonPressed(_ sender: UIButton) {
             switch (sender.tag, storyIndex) {
             case (1,1) :
-                storyTextView.text = storyLineDB.story3
-                topButton.setTitle(storyLineDB.answer3a, for: .normal)
-                bottomButton.setTitle(storyLineDB.answer3b, for: .normal)
+                storyTextView.text = storyLine.story3.lineForStory
+                topButton.setTitle(storyLine.story3.answer1, for: .normal)
+                bottomButton.setTitle(storyLine.story3.answer2, for: .normal)
                 storyIndex = 3
             case (1,3) :
-                storyTextView.text = storyLineDB.story6
+                storyTextView.text = storyLine.story6.lineForStory
                 topButton.isHidden = true
                 bottomButton.isHidden = true
                 storyIndex = 6
             case (2,1) :
-                storyTextView.text = storyLineDB.story2
-                topButton.setTitle(storyLineDB.answer2a, for: .normal)
-                bottomButton.setTitle(storyLineDB.answer2b, for: .normal)
+                storyTextView.text = storyLine.story2.lineForStory
+                topButton.setTitle(storyLine.story2.answer1, for: .normal)
+                bottomButton.setTitle(storyLine.story2.answer2, for: .normal)
                 storyIndex = 2
             case (2,3) :
-                storyTextView.text = storyLineDB.story5
+                storyTextView.text = storyLine.story5.lineForStory
                 topButton.isHidden = true
                 bottomButton.isHidden = true
                 storyIndex = 5
             case (1,2) :
-                storyTextView.text = storyLineDB.story3
-                topButton.setTitle(storyLineDB.answer3a, for: .normal)
-                bottomButton.setTitle(storyLineDB.answer3b, for: .normal)
+                storyTextView.text = storyLine.story3.lineForStory
+                topButton.setTitle(storyLine.story3.answer1, for: .normal)
+                bottomButton.setTitle(storyLine.story3.answer2, for: .normal)
                 storyIndex = 3
             case (2,2) :
-                storyTextView.text = storyLineDB.story4
+                storyTextView.text = storyLine.story4.lineForStory
                 topButton.isHidden = true
                 bottomButton.isHidden = true
                 storyIndex = 4
@@ -70,9 +70,9 @@ class ViewController: UIViewController {
     
     func restart() {
         storyIndex = 1
-        storyTextView.text = storyLineDB.story1
-        topButton.setTitle(storyLineDB.answer1a, for: .normal)
-        bottomButton.setTitle(storyLineDB.answer1b, for: .normal)
+        storyTextView.text = storyLine.story1.lineForStory
+        topButton.setTitle(storyLine.story1.answer1, for: .normal)
+        bottomButton.setTitle(storyLine.story1.answer2, for: .normal)
         restartButton.isHidden = true
         topButton.isHidden = false
         bottomButton.isHidden = false
