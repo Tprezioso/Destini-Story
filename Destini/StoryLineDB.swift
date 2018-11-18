@@ -22,11 +22,6 @@ class StoryLineBD {
 ,firstAnswer: "", secondAnswer: "")
 
     init() {
-//        story.append(StoryLines(storyLine: story1, firstAnswer: answer1a, secondAnswer: answer1b))
-//        story.append(StoryLines(storyLine: story2, firstAnswer: answer2a, secondAnswer: answer2b))
-//        story.append(StoryLines(storyLine: story3, firstAnswer: answer3a, secondAnswer: answer3b))
-//        story.append(StoryLines(storyLine: story4, firstAnswer: "", secondAnswer: ""))
-//        story.append(StoryLines(storyLine: story5, firstAnswer: "", secondAnswer: ""))
-//        story.append(StoryLines(storyLine: story6, firstAnswer: "", secondAnswer: ""))
+
     }
 }
